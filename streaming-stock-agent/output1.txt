@@ -1,0 +1,43 @@
+Session: cli_session
+Query: Compare AAPL and MSFT
+------------------------------------------------------------
+Here’s the latest **Apple (AAPL) vs Microsoft (MSFT)** comparison as of March 25, 2026:
+
+| **Metric**            | **Apple Inc. (AAPL)**         | **Microsoft Corporation (MSFT)** |
+|------------------------|-------------------------------|----------------------------------|
+| **Current Price**      | $253.95                       | $370.82                          |
+| **24-Hour Change**     | +$1.64 (+0.65%)               | -$1.41 (-0.38%)                 |
+| **Market Cap**         | $3.44T                        | $2.79T                         |
+| **52-Week High/Low**   | $265.04 - $166.35             | $398.09 - $259.01              |
+| **P/E Ratio**          | 34.7                          | 38.0                           |
+
+---
+
+### **Key Insights**
+1. **Recent Performance**:
+   - **Apple** is up slightly, reflecting optimism about its iPhone upgrades and AI feature rollouts.
+   - **Microsoft** is down, as investors weigh in on mixed Azure growth and AI cost challenges.
+
+2. **Market Leadership**:
+   - Apple remains the **largest company globally** ($3.44T), driven by hardware/software integration and services growth.
+   - Microsoft (second-largest at $2.79T) dominates enterprise software and cloud infrastructure but faces slower AI ROI cycles.
+
+3. **Valuation**:
+   - Apple’s lower P/E ratio (34.7) signals stronger immediate profitability.
+   - Microsoft’s higher P/E (38.0) reflects expectations of long-term AI cloud dominance.
+
+4. **Sector Trends**:
+   - Apple leans on **consumer tech demand** (iPhone 16 sales, AR headsets).
+   - Microsoft focuses on **enterprise AI integration** (Azure Copilot, Databricks partnerships).
+
+---
+
+### **Investor Takeaways**
+- **Apple** may appeal to those targeting **consumer hardware/software synergy** and stable cash flows.
+- **Microsoft** suits investors prioritizing **cloud/AI innovation** despite current valuation multiples.
+
+*Data is from Yahoo Finance and delayed by up to 20 minutes.* Would you like a deeper look into their historical performance or financials like revenue breakdowns?
+[Done]
+
+============================================================
+

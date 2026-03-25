@@ -1,0 +1,54 @@
+Testing /ping endpoint...
+Status: 200
+Response: {'status': 'ok'}
+
+============================================================
+MULTI-TURN CONVERSATION TEST
+============================================================
+
+Session: test_session_123
+Query: What is the current price of Apple stock?
+------------------------------------------------------------
+
+[Tool calls starting...]
+
+[Calling tool: get_stock_price with args {'ticker': 'AAPL'}]
+[Tool calls completed]
+
+The current price of Apple (AAPL) is **$254.02**, as of March 25, 2026, at 1:32 PM. This is up **$2.38 (0.95%)** from its previous close of $251.64. The market is currently in "REGULAR" trading hours. 
+
+Data is from Yahoo Finance and may have a slight delay. Let me know if you'd like further details!
+[Done]
+
+============================================================
+
+Session: test_session_123
+Query: How has it changed in the last 30 days?
+------------------------------------------------------------
+
+[Tool calls starting...]
+
+[Calling tool: get_stock_history with args {'days': 30, 'ticker': 'AAPL'}]
+[Tool calls completed]
+
+Apple (AAPL) stock has declined over the last 30 days. Here's the key data:
+
+- **30-day range**: $246.00 (low) to $276.11 (high)  
+- **Starting price**: $266.18 on Feb 23, 2026  
+- **Current price**: $254.00 as of March 25, 2026  
+- **Total change**: **-12.18 (-4.58%)**  
+- **Trading volume**: Average of ~40.4 million shares/day  
+
+The stock has shown volatility during this period but is currently below its 30-day high. Would you like additional analysis or context?
+[Done]
+
+============================================================
+
+Session: test_session_123
+Query: What about Tesla?
+------------------------------------------------------------
+Would you like me to check Tesla's (TSLA) current stock price, its 30-day performance, company information, or compare it to Apple? Let me know what details you'd like!
+[Done]
+
+============================================================
+
