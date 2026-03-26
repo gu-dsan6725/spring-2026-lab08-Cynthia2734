@@ -277,16 +277,16 @@ The orchestrator should:
 ## Verification Checklist
 
 Before submitting, verify:
-- [ ] `_detect_subscriptions()` correctly filters recurring transactions
-- [ ] MCP servers are correctly configured with matching names
-- [ ] Both `get_bank_transactions` and `get_credit_card_transactions` tools are called
-- [ ] All three sub-agents are defined with correct prompts and models
-- [ ] `ClaudeAgentOptions` includes all required parameters
-- [ ] Agent execution uses `async with` and handles messages correctly
-- [ ] Streaming text output works (text appears in real-time)
-- [ ] All output files are created in correct locations
-- [ ] Final report includes synthesis of all three sub-agent findings
-- [ ] Code follows project standards (type hints, docstrings, logging)
+- [x] `_detect_subscriptions()` correctly filters recurring transactions
+- [x] MCP servers are correctly configured with matching names
+- [x] Both `get_bank_transactions` and `get_credit_card_transactions` tools are called
+- [x] All three sub-agents are defined with correct prompts and models
+- [x] `ClaudeAgentOptions` includes all required parameters
+- [x] Agent execution uses `async with` and handles messages correctly
+- [x] Streaming text output works (text appears in real-time)
+- [x] All output files are created in correct locations
+- [x] Final report includes synthesis of all three sub-agent findings
+- [x] Code follows project standards (type hints, docstrings, logging)
 
 ## Resources
 

@@ -68,11 +68,8 @@ def _detect_subscriptions(
 ) -> list[dict]:
     """Detect subscription services from recurring transactions.
 
-    TODO: Implement logic to:
-    1. Filter transactions marked as recurring
-    2. Identify subscription patterns (monthly charges)
-    3. Categorize by service type
-    4. Calculate total monthly subscription cost
+    Filters transactions marked as recurring from both bank and credit card
+    sources, then extracts subscription name, amount, and frequency.
 
     Args:
         bank_transactions: List of bank transaction dicts
@@ -83,9 +80,6 @@ def _detect_subscriptions(
     """
     subscriptions = []
 
-    # TODO: Implement subscription detection logic
-    # Hint: Look for transactions with recurring=True
-    # Hint: Subscriptions are typically negative amounts (outflows)
     all_transactions = bank_transactions + credit_card_transactions
     for txn in all_transactions:
         if txn.get("recurring", False):
@@ -104,11 +98,8 @@ async def _fetch_financial_data(
 ) -> tuple[dict, dict]:
     """Fetch data from Bank and Credit Card MCP servers.
 
-    TODO: Implement MCP server connections using Claude Agent SDK
-    1. Configure MCP server connections (ports 5001, 5002)
-    2. Call get_bank_transactions tool
-    3. Call get_credit_card_transactions tool
-    4. Save raw data to files
+    Creates a lightweight Haiku agent to call MCP tools and retrieve
+    bank and credit card transaction data.
 
     Args:
         username: Username for the account
@@ -122,8 +113,6 @@ async def _fetch_financial_data(
         f"Fetching financial data for {username} from {start_date} to {end_date}"
     )
 
-    # TODO: Configure and connect to MCP servers
-    # Example MCP configuration (keys must match FastMCP server names exactly):
     mcp_servers = {
         "Bank Account Server": {  # MUST match FastMCP server name exactly
             "type": "http",
@@ -141,7 +130,6 @@ async def _fetch_financial_data(
         cwd=str(working_dir),
     )
 
-    # TODO: Call MCP tools to fetch data
     bank_data = {}  # Placeholder
     credit_card_data = {}  # Placeholder
 
@@ -188,7 +176,7 @@ async def _run_orchestrator(
 ):
     """Main orchestrator agent logic.
 
-    TODO: Implement the orchestrator pattern:
+    Implement the orchestrator pattern:
     1. Fetch data from MCP servers (use tools)
     2. Perform initial analysis (detect subscriptions, anomalies)
     3. Decide which sub-agents to invoke based on query
@@ -224,7 +212,6 @@ async def _run_orchestrator(
     logger.info(f"Detected {len(subscriptions)} subscriptions")
 
     # Step 3: Define sub-agents
-    # TODO: Define sub-agents using AgentDefinition
     research_agent = AgentDefinition(
         description="Research cheaper alternatives for subscriptions and services",
         prompt=_load_prompt("research_agent_prompt.txt"),
@@ -253,7 +240,6 @@ async def _run_orchestrator(
     }
 
     # Step 4: Configure orchestrator agent with sub-agents
-    # TODO: Create ClaudeAgentOptions with agents and MCP servers
     working_dir = Path(__file__).parent.parent
     mcp_servers = {
         "Bank Account Server": {"type": "http", "url": "http://127.0.0.1:5001/mcp"},
@@ -271,7 +257,6 @@ async def _run_orchestrator(
     )
 
     # Step 5: Run orchestrator with Claude Agent SDK
-    # TODO: Use ClaudeSDKClient to run the orchestration
     user_prompt_template = _load_prompt("orchestrator_user_prompt.txt")
     prompt = user_prompt_template.format(
         user_query=user_query,
